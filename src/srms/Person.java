@@ -1,4 +1,5 @@
 
+package srms;
 
 public class Person{
     
@@ -27,7 +28,7 @@ public class Person{
               public void setName(String name){
         try{
             if(name == null || name.isEmpty()){
-                throw new Exception("name cannot be emptu!!");
+                throw new Exception("name cannot be empty!!");
             }
             this.name = name;
         }
