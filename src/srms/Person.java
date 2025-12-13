@@ -9,11 +9,11 @@ public class Person implements Serializable {
     private int age;
 
     public Person(String name, int id, int age) {
-        this.name = name;
-        this.id = id;
-        this.age = age;
+    setName(name);   
+    setId(id);      
+    setAge(age);
     }
-
+   
     public String getName() { return name; }
     public int getId() { return id; }
     public int getAge() { return age; }

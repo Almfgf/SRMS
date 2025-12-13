@@ -7,8 +7,8 @@ public class Student extends Person {
 
     public Student(String name, int id, int age, String major, double gpa) {
         super(name, id, age);
-        this.major = major;
-        this.gpa = gpa;
+        setMajor(major);  
+        setGpa(gpa);
     }
 
     public String getMajor() { return major; }

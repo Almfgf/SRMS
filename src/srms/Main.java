@@ -41,7 +41,7 @@ public class Main {
                     System.out.print("Age: ");
                     int age = in.nextInt();
 
-                    in.nextLine();
+                    in.nextLine(); 
                     System.out.print("Major: ");
                     String major = in.nextLine();
 
