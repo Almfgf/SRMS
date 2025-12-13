@@ -17,16 +17,17 @@ public class FileHandler {
 
     public void save(ArrayList<Student> students) {
         try (ObjectOutputStream out =
-                     new ObjectOutputStream(new FileOutputStream(filename))) {
+         new ObjectOutputStream(new FileOutputStream(filename))) {
             out.writeObject(students);
         } catch (IOException e) {
             System.out.println("Saving failed");
         }
     }
 
+    @SuppressWarnings("unchecked")
     public ArrayList<Student> load() {
         try (ObjectInputStream in =
-                     new ObjectInputStream(new FileInputStream(filename))) {
+          new ObjectInputStream(new FileInputStream(filename))) {
             return (ArrayList<Student>) in.readObject();
         } catch (IOException | ClassNotFoundException e) {
             return new ArrayList<>();
