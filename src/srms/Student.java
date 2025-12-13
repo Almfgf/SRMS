@@ -17,7 +17,7 @@ public class Student extends Person {
     public void setMajor(String major) {
         try {
             if (major == null || major.isEmpty())
-                throw new Exception("Major cannot be empty");
+              throw new Exception("Major cannot be empty");
             this.major = major;
         } catch (Exception e) {
             System.out.println(e.getMessage());
