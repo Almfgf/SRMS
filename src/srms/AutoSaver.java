@@ -24,5 +24,4 @@ public class AutoSaver extends Thread {
     public void stopSaving() {
         running = false;
         interrupt();
-    }
-}
+    }}
