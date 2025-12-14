@@ -31,24 +31,30 @@ public class Main {
             switch (choice) {
 
                 case 1 -> {
-                    in.nextLine();
-                    System.out.print("Name: ");
-                    String name = in.nextLine();
+                    try {
+                        in.nextLine();
+                        System.out.print("Name: ");
+                        String name = in.nextLine();
 
-                    System.out.print("ID: ");
-                    int id = in.nextInt();
+                        System.out.print("ID: ");
+                        int id = in.nextInt();
 
-                    System.out.print("Age: ");
-                    int age = in.nextInt();
+                        System.out.print("Age: ");
+                        int age = in.nextInt();
 
-                    in.nextLine(); 
-                    System.out.print("Major: ");
-                    String major = in.nextLine();
+                        in.nextLine();
+                        System.out.print("Major: ");
+                        String major = in.nextLine();
 
-                    System.out.print("GPA: ");
-                    double gpa = in.nextDouble();
+                        System.out.print("GPA: ");
+                        double gpa = in.nextDouble();
 
-                    system.addStudent(new Student(name, id, age, major, gpa));
+                        system.addStudent(new Student(name, id, age, major, gpa));
+                        System.out.println("Student added successfully");
+
+                    } catch (InvalidStudentDataException e) {
+                        System.out.println("Error: " + e.getMessage());
+                    }
                 }
 
                 case 2 -> {
@@ -58,29 +64,38 @@ public class Main {
                 }
 
                 case 3 -> {
-                    System.out.print("ID: ");
-                    int id = in.nextInt();
+                    try {
+                        System.out.print("ID: ");
+                        int id = in.nextInt();
 
-                    in.nextLine();
-                    System.out.print("Name: ");
-                    String name = in.nextLine();
+                        in.nextLine();
+                        System.out.print("Name: ");
+                        String name = in.nextLine();
 
-                    System.out.print("Age: ");
-                    int age = in.nextInt();
+                        System.out.print("Age: ");
+                        int age = in.nextInt();
 
-                    in.nextLine();
-                    System.out.print("Major: ");
-                    String major = in.nextLine();
+                        in.nextLine();
+                        System.out.print("Major: ");
+                        String major = in.nextLine();
 
-                    System.out.print("GPA: ");
-                    double gpa = in.nextDouble();
+                        System.out.print("GPA: ");
+                        double gpa = in.nextDouble();
 
-                    system.updateStudent(id, name, age, major, gpa);
+                        system.updateStudent(id, name, age, major, gpa);
+
+                    } catch (InvalidStudentDataException e) {
+                        System.out.println("Error: " + e.getMessage());
+                    }
                 }
 
                 case 4 -> {
-                    for (Student s : system.getStudents()) {
-                        s.display();
+                    if (system.getStudents().isEmpty()) {
+                        System.out.println("No students found");
+                    } else {
+                        for (Student s : system.getStudents()) {
+                            s.display();
+                        }
                     }
                 }
 
@@ -105,12 +120,13 @@ public class Main {
                 case 8 -> {
                     system.stopAutoSave();
                     system.save();
-                    System.out.println("stop saving");
+                    System.out.println("Program ended");
                     run = false;
                 }
 
                 default -> System.out.println("Invalid choice");
             }
         }
-    }
-}
+
+        in.close();
+    }}
