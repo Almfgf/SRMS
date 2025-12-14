@@ -11,7 +11,7 @@ public class SRMS {
     public SRMS() {
         fileHandler = new FileHandler("students.ser");
         students = fileHandler.load();
-        autoSaver = new AutoSaver(this);
+        autoSaver = new AutoSaver(this ,5000);
         autoSaver.start();
     }
 
