@@ -8,44 +8,32 @@ public class Person implements Serializable {
     private int id;
     private int age;
 
-    public Person(String name, int id, int age) {
-    setName(name);   
-    setId(id);      
-    setAge(age);
+    public Person(String name, int id, int age) throws InvalidStudentDataException {
+        setName(name);
+        setId(id);
+        setAge(age);
     }
-   
+
     public String getName() { return name; }
     public int getId() { return id; }
     public int getAge() { return age; }
 
-    public void setName(String name) {
-        try {
-            if (name == null || name.isEmpty())
-                throw new Exception("Name cannot be empty");
-            this.name = name;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+    public void setName(String name) throws InvalidStudentDataException {
+        if (name == null || name.trim().isEmpty())
+            throw new InvalidStudentDataException("Name cannot be empty");
+        this.name = name;
     }
 
-    public void setId(int id) {
-        try {
-            if (id <= 0)
-                throw new Exception("ID must be positive");
-            this.id = id;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+    public void setId(int id) throws InvalidStudentDataException {
+        if (id <= 0)
+            throw new InvalidStudentDataException("ID must be positive");
+        this.id = id;
     }
 
-    public void setAge(int age) {
-        try {
-            if (age < 0)
-                throw new Exception("Age cannot be negative");
-            this.age = age;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+    public void setAge(int age) throws InvalidStudentDataException {
+        if (age < 0)
+            throw new InvalidStudentDataException("Age cannot be negative");
+        this.age = age;
     }
 
     public void display() {

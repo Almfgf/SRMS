@@ -1,9 +1,9 @@
 package srms;
 
- public class AutoSaver extends Thread {
+public class AutoSaver extends Thread {
 
-    private SRMS system;
-    private int interval;
+    private final SRMS system;
+    private final int interval;
     private boolean active;
 
     public AutoSaver(SRMS system, int interval) {
