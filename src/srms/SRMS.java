@@ -18,6 +18,8 @@ public class SRMS {
     public void addStudent(Student s) {
         students.add(s);
     }
+    
+    
 
     public void removeStudent(int id) {
         for (int i = 0; i < students.size(); i++) {
