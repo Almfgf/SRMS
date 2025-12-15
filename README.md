@@ -24,6 +24,7 @@ the system manages records and demonstrates core and advanced java concepts such
    #Project structure:
   
  src/srms/
+ 
 ├── Main.java
 
 ├── Person.java
