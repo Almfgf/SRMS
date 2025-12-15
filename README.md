@@ -21,7 +21,8 @@ the system manages records and demonstrates core and advanced java concepts such
   - Custom Exception
   - Git & GitHub for collaboration
 
-   #Project structure
+   #Project structure:
+  
     src/srms/
 ├── Main.java
 ├── Person.java
