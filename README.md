@@ -20,8 +20,8 @@ the system manages records and demonstrates core and advanced java concepts such
   - Multithreading
   - Custom Exception
   - Git & GitHub for collaboration
- 
-    #Project structure
+
+   #Project structure
     src/srms/
 ├── Main.java
 ├── Person.java
@@ -32,13 +32,13 @@ the system manages records and demonstrates core and advanced java concepts such
 ├── AutoSaver.java
 └── InvalidStudentDataException.java
 
-## how to run
+## How to run
 1. Comlile the project
 javac -d bin src/srms/*.java
 2. Run the application
 java -cp bin srms.Main
-   
-   ## Data Validation Rules
+
+    ## Data Validation Rules
    - Name & Major: cannot be empty
    - ID : positive integer
    - Age : non negative
@@ -55,11 +55,11 @@ java -cp bin srms.Main
        - Working with multithreading
        - Team collaboration using GitHub
       
-      ## license
+ ## license
 Educational use only – developed for coursework at Qassim University, College of Computer, IT Department.
 
 ## Team members
-- Raghad Alghidani 
-- Almas Alfawzan
-- Renad Almuatiri
-- Rehab Alshammari
+- Raghad Alghidani 441204025
+- Almas Alfawzan 451203492
+- Renad Almuatiri 451203468
+- Rehab Alshammari 451203456
